@@ -163,6 +163,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-wp-rest-api"
+    }
+  },
+  "defaultProject": "ng-wp-rest-api",
+  "cli": {
+    "analytics": false
+  }
 }
