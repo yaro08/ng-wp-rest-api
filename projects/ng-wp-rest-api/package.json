@@ -1,8 +1,8 @@
 {
-  "name": "ng-wp-rest-api",
-  "version": "0.0.3",
+  "name": "yt-ng-wp-rest-api",
+  "version": "0.0.4",
   "license": "MIT",
-  "repository": "benohead/ng-wp-rest-api",
+  "repository": "yaro08/ng-wp-rest-api",
   "keywords": [
     "angular",
     "ng",

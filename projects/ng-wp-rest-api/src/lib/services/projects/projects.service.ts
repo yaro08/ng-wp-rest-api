@@ -11,7 +11,7 @@ import {map} from 'rxjs/operators';
 })
 export class ProjectsService implements Projects {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }NgWpRestApiModule
 
   get(id: number, options = {}): Observable<Project> {
     return this.http.get<Project>('project/' + id, options);
