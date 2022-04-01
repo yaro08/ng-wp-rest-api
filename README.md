@@ -20,4 +20,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## License
 
 MIT © Henri Benoit(mailto:henri.benoit@gmail.com)
-Edited by Yaroslav Trush (yaro08)
+Edited by yaro08

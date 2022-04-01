@@ -5,7 +5,7 @@
 To install this library, run:
 
 ```bash
-$ npm install ng-wp-rest-api --save
+$ npm install yt-ng-wp-rest-api --save
 ```
 
 and then from your Angular `AppModule`:
@@ -13,7 +13,7 @@ and then from your Angular `AppModule`:
 ```typescript
 ...
 // Import the module and the posts service from the library
-import { NgWpRestApiModule, PostsService } from 'ng-wp-rest-api';
+import { NgWpRestApiModule, PostsService } from 'yt-ng-wp-rest-api';
 ...
 
 @NgModule({
@@ -41,7 +41,7 @@ Once the library is imported, you can use its services in your Angular applicati
 
 ```typescript
 ...
-import { Post, PostsService } from 'ng-wp-rest-api';
+import { Post, PostsService } from 'yt-ng-wp-rest-api';
 ...
 @Component({
 ...
@@ -99,6 +99,33 @@ And display posts in your views e.g.:
 </div>
 ```
 
+EDIT: now is available use custom scheme (endpoints) like:
+...wp-json/wp/v2/posts
+...wp-json/wp/v2/customScheme
+
+```typescript
+...
+import {Project, CustomEndpointService } from 'ng-wp-rest-api';;
+...
+@Component({
+...
+})
+export class AppComponent {
+  
+  constructor(private custom: CustomEndpointService) {
+
+    this.custom.list<Project>('project', 
+      {
+        _embed: 'author,wp:featuredmedia'
+      })
+      .subscribe(result => {
+        console.log('result', result);
+      });
+  }
+}
+```
+
+
 ## License
 
-MIT © Henri Benoit(mailto:henri.benoit@gmail.com)
+MIT © Henri Benoit(mailto:henri.benoit@gmail.com) Edited by Yaro08

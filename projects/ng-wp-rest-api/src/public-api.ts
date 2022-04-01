@@ -8,4 +8,4 @@ export * from './lib/models/post';
 export * from './lib/services/posts.service';
 
 export * from  './lib/models/project';
-export * from  './lib/services/projects/projects.service';
+export * from  './lib/services/custom-endpoints/custom.service';

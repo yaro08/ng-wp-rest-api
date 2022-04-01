@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Post, PostsService } from 'ng-wp-rest-api';
+import { Post, PostsService, Project, CustomEndpointService } from 'ng-wp-rest-api';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,7 +11,12 @@ export class AppComponent {
   title = 'ng-wp-rest-api-showcase';
   posts$: Observable<Post[]>;
 
-  constructor(private posts: PostsService) {
+  constructor(private posts: PostsService,
+              private custom: CustomEndpointService) {
     this.posts$ = this.posts.list();
+
+    this.custom.list<Project>('project', {_embed: 'author,wp:featuredmedia'}).subscribe(result => {
+      console.log('result', result);
+    });
   }
 }

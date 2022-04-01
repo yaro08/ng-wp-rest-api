@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PostsService } from './services/posts.service';
 import { BaseUrlInterceptor } from './utils/BaseUrlInterceptor';
-import {ProjectsService} from './services/projects/projects.service';
+import {CustomEndpointService} from './services/custom-endpoints/custom.service';
 
 @NgModule({
   declarations: [],
@@ -17,7 +17,7 @@ import {ProjectsService} from './services/projects/projects.service';
       multi: true,
     },
     PostsService,
-    ProjectsService
+    CustomEndpointService
   ]
 })
 export class NgWpRestApiModule { }

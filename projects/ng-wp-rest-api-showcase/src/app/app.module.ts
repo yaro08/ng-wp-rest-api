@@ -13,7 +13,7 @@ import { NgWpRestApiModule, PostsService } from 'ng-wp-rest-api';
     NgWpRestApiModule,
   ],
   providers: [
-    { provide: 'wpApiBaseUrl', useValue: 'https://techcrunch.com/wp-json' },
+    { provide: 'wpApiBaseUrl', useValue: 'https://ventajas2.zeus.umh.es/wp-json' },
     PostsService
   ],
   bootstrap: [AppComponent]

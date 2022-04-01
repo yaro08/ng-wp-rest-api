@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ProjectsService } from './projects.service';
+import { CustomEndpointService } from './custom.service';
 
 describe('ProjectsService', () => {
-  let service: ProjectsService;
+  let service: CustomEndpointService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ProjectsService);
+    service = TestBed.inject(CustomEndpointService);
   });
 
   it('should be created', () => {
