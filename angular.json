@@ -28,18 +28,6 @@
             "tsConfig": "projects/ng-wp-rest-api/tsconfig.spec.json",
             "karmaConfig": "projects/ng-wp-rest-api/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ng-wp-rest-api/tsconfig.lib.json",
-              "projects/ng-wp-rest-api/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -62,7 +50,6 @@
             "main": "projects/ng-wp-rest-api-showcase/src/main.ts",
             "polyfills": "projects/ng-wp-rest-api-showcase/src/polyfills.ts",
             "tsConfig": "projects/ng-wp-rest-api-showcase/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/ng-wp-rest-api-showcase/src/favicon.ico",
               "projects/ng-wp-rest-api-showcase/src/assets"
@@ -70,7 +57,13 @@
             "styles": [
               "projects/ng-wp-rest-api-showcase/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -100,7 +93,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -134,19 +128,6 @@
               "projects/ng-wp-rest-api-showcase/src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ng-wp-rest-api-showcase/tsconfig.app.json",
-              "projects/ng-wp-rest-api-showcase/tsconfig.spec.json",
-              "projects/ng-wp-rest-api-showcase/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {
