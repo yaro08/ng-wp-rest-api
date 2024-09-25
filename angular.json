@@ -145,7 +145,6 @@
       }
     }
   },
-  "defaultProject": "ng-wp-rest-api",
   "cli": {
     "analytics": false
   }
