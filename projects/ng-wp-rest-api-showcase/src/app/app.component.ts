@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { Post, PostsService, Project, CustomEndpointService } from 'ng-wp-rest-api';
 import { Observable } from 'rxjs';
+import {Post} from '../../../ng-wp-rest-api/src/lib/models/post';
+import {PostsService} from '../../../ng-wp-rest-api/src/lib/services/posts.service';
+import {CustomEndpointService} from '../../../ng-wp-rest-api/src/lib/services/custom-endpoints/custom.service';
+import {Project} from '../../../ng-wp-rest-api/src/lib/models/project';
 
 @Component({
   selector: 'app-root',
