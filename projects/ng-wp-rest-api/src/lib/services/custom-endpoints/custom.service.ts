@@ -7,7 +7,7 @@ import {Custom} from './custom';
 @Injectable({
   providedIn: 'root'
 })
-export class CustomEndpointService implements Custom {
+export class WpApiCustomService implements Custom {
 
   constructor(private http: HttpClient) { }
 

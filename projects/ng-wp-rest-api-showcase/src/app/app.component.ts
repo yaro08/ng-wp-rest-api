@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import {Post} from '../../../ng-wp-rest-api/src/lib/models/post';
-import {PostsService} from '../../../ng-wp-rest-api/src/lib/services/posts.service';
-import {CustomEndpointService} from '../../../ng-wp-rest-api/src/lib/services/custom-endpoints/custom.service';
-import {Project} from '../../../ng-wp-rest-api/src/lib/models/project';
+import { Post, PostsService, Project, WpApiCustomService } from 'ng-wp-rest-api';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +12,7 @@ export class AppComponent {
   posts$: Observable<Post[]>;
 
   constructor(private posts: PostsService,
-              private custom: CustomEndpointService) {
+              private custom: WpApiCustomService) {
     this.posts$ = this.posts.list();
 
     this.custom.list<Project>('project', {_embed: 'author,wp:featuredmedia'}).subscribe(result => {
